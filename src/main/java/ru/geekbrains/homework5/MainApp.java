@@ -15,19 +15,41 @@ public class MainApp {
                 new Employee("female", "Natalia Oray", "Senior Manager", "Nat@gmail.com", 95000, 40),
         };
 
-        Employee[] emplArray2 = {
-                new Employee("Jora", "Driver", 50000)
-        };
+//        Employee[] emplArray2 = {
+//                new Employee("Jora", "Driver", 50000)
+//        };
 
         for (int i = 0; i < emplArray.length; i++) {
             int n = 40;
-            for (int j = 0; j < emplArray.length; j++) {
-                 if (emplArray[j].getAge() > n){
-                 }
+            if (emplArray[i].getAge() > n) {
+                System.out.print("сотрудники старше " + n + ": " + '\n');
+                emplArray[i].info();
+                System.out.println();
             }
-            System.out.print("сотрудники старше " + n + ": ");
-            emplArray[i].info();
+            if ((emplArray[i].getAge() < 50) && (emplArray[i].getSalary() > 50000)) {
+                System.out.print("Второе лицо компании " + n + ": " + '\n');
+                emplArray[i].info();
+                System.out.println();
+            }
         }
+
+        for (int i = 0; i < emplArray.length; i++) {
+            if (emplArray[i].getGender().equals("female")) {
+                System.out.print("Женский коллектив: " + '\n');
+                emplArray[i].info();
+            }
+        }
+
+        System.out.println();
+
+        for (int i = 0; i < emplArray.length; i++) {
+            if (emplArray[i].getPosition().equals("Manager")) {
+                System.out.print("Лучший работник: " + '\n');
+                emplArray[i].info();
+            }
+        }
+
+        System.out.println();
 
     }
 }

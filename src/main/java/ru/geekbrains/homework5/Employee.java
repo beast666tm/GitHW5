@@ -23,20 +23,28 @@ public class Employee {
         this.salary = salary;
     }
 
-    public void info(){
-        System.out.println(gender + ", " + name + ", " + position + ", " + email + ", " + salary +  ", " + age + ";");
+    public void info() {
+        System.out.println(gender + ", " + name + ", " + position + ", " + email + ", " + salary + ", " + age + ";");
     }
 
     public int getAge() {
-        return salary;
+        return age;
     }
 
-    public void setAge(int age) {
-        this.age = age;
+    public String getPosition() {
+        return position;
+    }
+
+    public int getSalary() {
+        return salary;
     }
 
     public String getGender() {
         return gender;
+    }
+
+    public void setAge(int age) {
+        this.age = age;
     }
 }
 
